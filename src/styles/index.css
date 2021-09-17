@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  --bg-color: #0b0c10;
+  --primary-color: #66fcf1;
+  --secondary-color: #1f2833;
+  --elements-color: #c5c6c7;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Layout */
+@import "./layout/header.css";

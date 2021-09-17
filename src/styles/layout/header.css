@@ -1,0 +1,157 @@
+header {
+  position: fixed;
+  top: 0;
+  padding: 0 50px;
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 30px;
+}
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  padding: 10px;
+  color: var(--elements-color);
+  font-size: 14px;
+  transition: color 0.75s;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.hamburgerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 10;
+
+  margin-right: -15px;
+  padding: 15px;
+  border: 0px;
+  background-color: transparent;
+  color: inherit;
+  text-transform: none;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+}
+
+.ham-box {
+  position: relative;
+  height: 24px;
+  width: 30px;
+
+  display: none;
+}
+
+.ham-box-inner {
+  height: 2px;
+  width: 30px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.ham-box-inner::before,
+.ham-box-inner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: auto;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+}
+
+.ham-box-inner::before {
+  width: 120%;
+  top: -10px;
+}
+.ham-box-inner::after {
+  width: 80%;
+  bottom: -10px;
+}
+
+@media (max-width: 1080px) {
+  header {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 0 25px;
+  }
+
+  .navlinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: min(75vw, 400px);
+    background-color: var(--secondary-color);
+    transform: translateX(100vw);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .navlinks.show {
+    display: flex;
+    transform: translateX(0vw);
+  }
+
+  .ham-box {
+    display: block;
+    z-index: 10;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0px auto 30px;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 3px 20px 20px;
+  }
+}
