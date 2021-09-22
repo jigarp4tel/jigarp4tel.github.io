@@ -85,6 +85,9 @@ nav ul li a:hover {
   position: absolute;
   top: 50%;
   right: 0;
+
+  transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+  transform: rotate(0deg);
 }
 
 .ham-box-inner::before,
@@ -99,12 +102,39 @@ nav ul li a:hover {
 }
 
 .ham-box-inner::before {
-  width: 120%;
+  width: 100%;
   top: -10px;
+  transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
 }
 .ham-box-inner::after {
-  width: 80%;
+  width: 100%;
   bottom: -10px;
+  transition: bottom 0.1s ease-in 0.25s,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.ham-box-inner.show {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  transition: transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transform: rotate(225deg);
+}
+
+.ham-box-inner.show::before {
+  width: 100%;
+  top: 0px;
+  opacity: 0;
+}
+
+.ham-box-inner.show::after {
+  width: 100%;
+  bottom: 0px;
+  transform: rotate(-90deg);
 }
 
 @media (max-width: 1080px) {
@@ -123,10 +153,11 @@ nav ul li a:hover {
     right: 0;
     bottom: 0;
     height: 100vh;
-    width: min(75vw, 400px);
+    /* width: min(75vw, 400px); */
+    width: 100vw;
     background-color: var(--secondary-color);
     transform: translateX(100vw);
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navlinks.show {

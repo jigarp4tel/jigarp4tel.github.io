@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Hero from './components/sections/Hero';
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Navbar />
+            <main>
+              <Hero />
+            </main>
           </Route>
         </Switch>
       </Router>

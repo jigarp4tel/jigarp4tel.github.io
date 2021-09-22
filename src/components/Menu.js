@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Menu = ({ toggleMenu }) => {
+const Menu = ({ toggleMenu, menuOpen }) => {
 
 
     return (
@@ -8,7 +8,7 @@ const Menu = ({ toggleMenu }) => {
 
             <button className="hamburgerBtn" onClick={toggleMenu}>
                 <div className="ham-box">
-                    <div className="ham-box-inner"></div>
+                    <div className={menuOpen ? 'ham-box-inner show' : 'ham-box-inner'}></div>
                 </div>
             </button>
 

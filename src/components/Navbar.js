@@ -24,7 +24,7 @@ const Navbar = () => {
                     </Link>
                 </Fade>
 
-                <Menu toggleMenu={toggleMenu} />
+                <Menu toggleMenu={toggleMenu} menuOpen={menuOpen} />
 
                 <div className={menuOpen ? 'navlinks show' : 'navlinks'}>
                     <Fade top cascade>
@@ -34,7 +34,7 @@ const Navbar = () => {
                                 navLinks &&
                                 navLinks.map(({ url, name }, i) => (
                                     <li key={i}>
-                                        <Link to={url}>{name}</Link>
+                                        <Link to={url} onClick={toggleMenu}>{name}</Link>
                                     </li>
                                 )
                                 )

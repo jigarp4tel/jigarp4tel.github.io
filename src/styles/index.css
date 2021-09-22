@@ -4,7 +4,8 @@
   --bg-color: #0b0c10;
   --primary-color: #66fcf1;
   --secondary-color: #1f2833;
-  --elements-color: #c5c6c7;
+  --elements-color: #e6e6e6;
+  --secondary-elements-color: #858383;
 }
 
 html {
@@ -23,6 +24,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg-color);
+  color: var(--elements-color);
 }
 
 a {
@@ -31,3 +33,4 @@ a {
 
 /* Layout */
 @import "./layout/header.css";
+@import "./layout/main.css";
