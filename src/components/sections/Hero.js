@@ -14,9 +14,9 @@ const Hero = () => {
                     <h2>Software Developer</h2>
                 </div>
                 <div className="social">
-                    <a href="https://github.com/jigarp4tel" target="_blank"><FaGithub className="social-icon" /></a>
-                    <a href="https://www.linkedin.com/in/jigarp4tel" target="_blank"><FaLinkedinIn className="social-icon" /></a>
-                    <a href="https://twitter.com/jigarp4tel" target="_blank"><FaTwitter className="social-icon" /></a>
+                    <a href="https://github.com/jigarp4tel" target="_blank" rel="noreferrer"><FaGithub className="social-icon" /></a>
+                    <a href="https://www.linkedin.com/in/jigarp4tel" target="_blank" rel="noreferrer"><FaLinkedinIn className="social-icon" /></a>
+                    <a href="https://twitter.com/jigarp4tel" target="_blank" rel="noreferrer"><FaTwitter className="social-icon" /></a>
                 </div>
             </Fade>
         </div>
