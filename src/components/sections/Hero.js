@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className="hero">
+        <section className="hero">
             <Fade bottom >
                 <div>
                     <span className="hero-span">Hello! my name is</span>
@@ -19,7 +19,7 @@ const Hero = () => {
                     <a href="https://twitter.com/jigarp4tel" target="_blank" rel="noreferrer"><FaTwitter className="social-icon" /></a>
                 </div>
             </Fade>
-        </div>
+        </section>
     )
 }
 
