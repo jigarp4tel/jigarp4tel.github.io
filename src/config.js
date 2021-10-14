@@ -16,19 +16,19 @@ export const socialMedia = [
 export const navLinks = [
     {
         name: 'About',
-        url: '/#about',
+        url: 'about',
     },
     {
-        name: 'Experience',
-        url: '/#jobs',
+        name: 'Skills',
+        url: 'skills',
     },
     {
         name: 'Work',
-        url: '/#projects',
+        url: 'projects',
     },
     {
         name: 'Contact',
-        url: '/#contact',
+        url: 'contact',
     },
 ];
 

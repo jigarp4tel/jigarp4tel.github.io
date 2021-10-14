@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade';
 import logo from '../assets/logo2.png';
 
@@ -14,14 +13,23 @@ const Navbar = () => {
         setMenuOpen(!menuOpen)
     }
 
+    const scrollTo = (url) => {
+        const ele = document.getElementById(url);
+
+        ele.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        })
+    }
+
     return (
         <header>
 
             <nav>
                 <Fade>
-                    <Link to="/">
-                        <img className="logo" src={logo} alt="logo" />
-                    </Link>
+                    <button className="logo">
+                        <img src={logo} alt="logo" />
+                    </button>
                 </Fade>
 
                 <Menu toggleMenu={toggleMenu} menuOpen={menuOpen} />
@@ -34,7 +42,10 @@ const Navbar = () => {
                                 navLinks &&
                                 navLinks.map(({ url, name }, i) => (
                                     <li key={i}>
-                                        <Link to={url} onClick={toggleMenu}>{name}</Link>
+                                        <button className="navlink" onClick={() => {
+                                            scrollTo(url)
+                                            toggleMenu()
+                                        }}>{name}</button>
                                     </li>
                                 )
                                 )
@@ -45,7 +56,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-        </header>
+        </header >
     )
 }
 

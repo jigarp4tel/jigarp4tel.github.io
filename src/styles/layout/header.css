@@ -20,7 +20,20 @@ nav {
   justify-content: space-between;
 }
 
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
 .logo {
+  cursor: pointer;
+}
+
+.logo img {
   height: 30px;
 }
 .navlinks {
@@ -37,16 +50,36 @@ nav ul {
 
 nav ul li {
   margin: 0 5px;
+  padding: 10px;
 }
 
-nav ul li a {
-  padding: 10px;
+.navlink {
+  padding: 10px 0;
   color: var(--elements-color);
   font-size: 14px;
   transition: color 0.75s;
+  position: relative;
+  cursor: pointer;
 }
 
-nav ul li a:hover {
+.navlink::after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+}
+
+.navlink:hover::after {
+  transform: scaleX(1);
+  background-color: var(--primary-color);
+}
+
+.navlink:hover {
   color: var(--primary-color);
 }
 
@@ -157,12 +190,16 @@ nav ul li a:hover {
     /* width: min(75vw, 400px); */
     width: 100vw;
     background-color: var(--secondary-color);
+    opacity: 0;
     transform: translateX(100vw);
+    visibility: hidden;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navlinks.show {
     display: flex;
+    opacity: 1;
+    visibility: visible;
     transform: translateX(0vw);
   }
 
