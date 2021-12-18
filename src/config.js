@@ -41,6 +41,13 @@ export const siteColors = {
 
 
 export const projects = [{
+    title: 'Spotify Connected App',
+    description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks and your playlists, and sort tracks according to audio features like danceability, tempo and energy',
+    techList: ['React', 'Express', 'Styled Components', 'Spotify API', 'Heroku'],
+    liveURL: 'https://jigarp4tel-spotify-app.herokuapp.com/',
+    githubRepo: 'https://github.com/jigarp4tel/spotify-app'
+},
+{
     title: 'REST Countries API with color theme switcher',
     description: 'React challenge to to integrate with the REST Countries to pull country data and display it like in the designs.',
     techList: ['HTML', 'REST API', 'React'],
@@ -67,7 +74,7 @@ export const projects = [{
     description: 'A food delivery website where users can order food and create and maintain their account. Restaurant owners can create menu and update products. Site admin can perform CRUD operations for the users and all the products.',
     techList: ['C#', '.NET Core', 'SQL', 'HTML', 'CSS', 'JS', 'Bootstrap'],
     liveURL: '',
-    githubRepo: 'https://github.com/jigarp4tel/frontend-mentor-challenges'
+    githubRepo: 'https://github.com/jigarp4tel/swiftmeal'
 },
 {
     title: 'Hotel Reservation Site',
