@@ -7,7 +7,7 @@ const About = () => {
             <h3 className="section-title">About</h3>
             <Fade bottom cascade>
                 <div className="about-description">
-                    <p>Hello! I'm Jigar an aspiring fullstack developer from India currently based in Winnipeg, Canada.</p>
+                    <p>Hello! I'm Jigar a fullstack developer from India currently based in Surrey, Canada.</p>
                     <p>
                         I’m technology geek and enthusiast who loves to solve problems and fix things with technology.
                         I’m interested in building apps and websites that look good, and make people's lives easier. I love learning new things, and solving problems!
